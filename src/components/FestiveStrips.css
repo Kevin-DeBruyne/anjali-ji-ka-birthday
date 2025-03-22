@@ -1,0 +1,67 @@
+.strips-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.festive-strip {
+  position: absolute;
+  width: 20vw;
+  height: 15px;
+  background: linear-gradient(
+    to right,
+    red,
+    yellow,
+    blue,
+    green,
+    orange
+  );
+  border-radius: 5px;
+  top: calc(10% + var(--random-y, 0px));
+  left: calc(var(--random-x, 0px));
+  transform: rotate(var(--random-rotation, 0deg));
+  animation: wave 2s infinite alternate ease-in-out;
+}
+
+.festive-strip:nth-child(1) {
+  --random-x: 5%;
+  --random-y: 20px;
+  --random-rotation: 10deg;
+}
+
+.festive-strip:nth-child(2) {
+  --random-x: 25%;
+  --random-y: 30px;
+  --random-rotation: -5deg;
+}
+
+.festive-strip:nth-child(3) {
+  --random-x: 50%;
+  --random-y: 40px;
+  --random-rotation: 8deg;
+}
+
+.festive-strip:nth-child(4) {
+  --random-x: 75%;
+  --random-y: 25px;
+  --random-rotation: -7deg;
+}
+
+.festive-strip:nth-child(5) {
+  --random-x: 90%;
+  --random-y: 35px;
+  --random-rotation: 12deg;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
