@@ -18,13 +18,7 @@ const BirthdayCard = () => {
           
           {/* Confetti Effect Starts Immediately */}
           <ConfettiEffect />
-
-          {/* Balloons Floating Up */}
-          <div className="balloons">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <div key={i} className="balloon"></div>
-            ))}
-          </div>
+          
 
           {/* Birthday Person Image (Appears AFTER 2 seconds) */}
           <motion.div
