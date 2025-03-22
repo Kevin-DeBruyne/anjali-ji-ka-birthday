@@ -1,0 +1,29 @@
+.birthday-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centering image */
+  align-items: center;
+  height: 80vh; /* Ensuring it stays in viewport */
+}
+
+.birthday-image {
+  width: 250px; /* Adjust size to your preference */
+  max-width: 90%; /* Ensuring responsiveness */
+  height: auto;
+  border-radius: 15px; /* Optional: Adds soft edges */
+}
+
+.birthday-hat {
+  position: absolute;
+  width: 100px; /* Smaller size for better fit */
+  top: 100px;
+}
+
+
+.birthday-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

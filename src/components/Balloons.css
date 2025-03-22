@@ -1,0 +1,14 @@
+.balloons-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  overflow: hidden;
+}
+
+.balloon {
+  width: 60px;
+  position: absolute;
+  left: calc(10% + 80% * random());
+}
