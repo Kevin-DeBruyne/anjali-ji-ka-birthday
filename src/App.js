@@ -1,42 +1,59 @@
-import React, { useState } from "react";
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import confetti from 'canvas-confetti';
+import './App.css';
 
-const BirthdayCard = () => {
+function App() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+    }
+  }, [isOpen]);
+
   return (
-    <div className="container">
-      <div className={`card ${isOpen ? "open" : ""}`} onClick={() => setIsOpen(true)}>
-        <div className="card-front">
-          <h2>🎉 Click to Open 🎉</h2>
-        </div>
-        <div className="card-inside">
-          <div className="left-page">
-            <h2>Happy Birthday!</h2>
-            <p>🎂 Wishing you all the happiness in the world! 🎂</p>
-          </div>
-          <div className="right-page">
-            <img src="/images/hat.svg" alt="Hat" className="hat" />
-            <img src="/images/birthday_photo.jpg" alt="Birthday Person" className="person" />
-          </div>
-        </div>
+    <div className="App">
+      <div className="card-container">
+        {!isOpen ? (
+          <motion.button
+            className="card"
+            onClick={() => setIsOpen(true)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Click here to open the surprise!
+          </motion.button>
+        ) : (
+          <motion.div
+            className="card opened"
+            initial={{ rotateY: 0 }}
+            animate={{ rotateY: 180 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="content">
+              <h1>Happy 23rd Birthday!</h1>
+              <div className="photo-container">
+                <img src="/images/birthday_photo.jpg" alt="Birthday Person" className="photo" />
+                <motion.img
+                  src="/images/hat.svg"
+                  alt="Birthday Cap"
+                  className="cap"
+                  initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                />
+              </div>
+            </div>
+          </motion.div>
+        )}
       </div>
-      {isOpen && <Confetti />}
     </div>
   );
-};
+}
 
-const Confetti = () => {
-  return (
-    <div className="confetti-container">
-      {Array.from({ length: 50 }).map((_, i) => (
-        <div key={i} className="confetti"></div>
-      ))}
-      {Array.from({ length: 10 }).map((_, i) => (
-        <div key={i} className="balloon"></div>
-      ))}
-    </div>
-  );
-};
-
-export default BirthdayCard;
+export default App;
