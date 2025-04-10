@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/madamjibirthday/static/css/main.5e69de3c.css",
-    "main.js": "/madamjibirthday/static/js/main.b74eb4d4.js",
-    "static/js/453.572cfcd7.chunk.js": "/madamjibirthday/static/js/453.572cfcd7.chunk.js",
-    "index.html": "/madamjibirthday/index.html",
-    "main.5e69de3c.css.map": "/madamjibirthday/static/css/main.5e69de3c.css.map",
-    "main.b74eb4d4.js.map": "/madamjibirthday/static/js/main.b74eb4d4.js.map",
-    "453.572cfcd7.chunk.js.map": "/madamjibirthday/static/js/453.572cfcd7.chunk.js.map"
+    "main.css": "/anjali-ji-ka-birthday/static/css/main.5e69de3c.css",
+    "main.js": "/anjali-ji-ka-birthday/static/js/main.68495433.js",
+    "static/js/453.572cfcd7.chunk.js": "/anjali-ji-ka-birthday/static/js/453.572cfcd7.chunk.js",
+    "index.html": "/anjali-ji-ka-birthday/index.html",
+    "main.5e69de3c.css.map": "/anjali-ji-ka-birthday/static/css/main.5e69de3c.css.map",
+    "main.68495433.js.map": "/anjali-ji-ka-birthday/static/js/main.68495433.js.map",
+    "453.572cfcd7.chunk.js.map": "/anjali-ji-ka-birthday/static/js/453.572cfcd7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e69de3c.css",
-    "static/js/main.b74eb4d4.js"
+    "static/js/main.68495433.js"
   ]
 }
