@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/anjali-ji-ka-birthday/static/css/main.5e69de3c.css",
-    "main.js": "/anjali-ji-ka-birthday/static/js/main.68495433.js",
-    "static/js/453.572cfcd7.chunk.js": "/anjali-ji-ka-birthday/static/js/453.572cfcd7.chunk.js",
-    "index.html": "/anjali-ji-ka-birthday/index.html",
-    "main.5e69de3c.css.map": "/anjali-ji-ka-birthday/static/css/main.5e69de3c.css.map",
-    "main.68495433.js.map": "/anjali-ji-ka-birthday/static/js/main.68495433.js.map",
-    "453.572cfcd7.chunk.js.map": "/anjali-ji-ka-birthday/static/js/453.572cfcd7.chunk.js.map"
+    "main.css": "/static/css/main.5e69de3c.css",
+    "main.js": "/static/js/main.12d40518.js",
+    "static/js/453.572cfcd7.chunk.js": "/static/js/453.572cfcd7.chunk.js",
+    "index.html": "/index.html",
+    "main.5e69de3c.css.map": "/static/css/main.5e69de3c.css.map",
+    "main.12d40518.js.map": "/static/js/main.12d40518.js.map",
+    "453.572cfcd7.chunk.js.map": "/static/js/453.572cfcd7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e69de3c.css",
-    "static/js/main.68495433.js"
+    "static/js/main.12d40518.js"
   ]
 }
