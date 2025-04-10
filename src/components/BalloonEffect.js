@@ -16,7 +16,7 @@ const BalloonEffect = () => {
           <motion.img
             key={index}
             className="balloon"
-            src="/images/favicon.png" // Ensure balloon image has a string
+            src={`${process.env.PUBLIC_URL}/images/favicon.png`} // Ensure balloon image has a string
             alt="Balloon"
             initial={{ y: "100vh", opacity: 0 }}
             animate={{ y: "-120vh", opacity: 1 }}

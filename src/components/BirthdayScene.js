@@ -8,7 +8,10 @@ const BirthdayScene = () => {
     <div>
       <ConfettiEffect />
       <Balloons />
-      <BirthdayImage imgSrc="/images/birthday_photo.jpg" hatSrc="/images/hat.svg" />
+      <BirthdayImage 
+        imgSrc={`${process.env.PUBLIC_URL}/images/birthday_photo.jpg`} 
+        hatSrc={`${process.env.PUBLIC_URL}/images/hat.svg`} 
+      />
     </div>
   );
 };

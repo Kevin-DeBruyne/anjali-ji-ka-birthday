@@ -62,6 +62,21 @@ body {
   width: 80px;
 }
 
+/* Add responsive styles for the hat */
+@media (max-width: 768px) {
+  .birthday-hat {
+    top: 285px;
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-hat {
+    top: 235px;
+    width: 50px;
+  }
+}
+
 .birthday-age {
   position: absolute;
   top: 18%;
