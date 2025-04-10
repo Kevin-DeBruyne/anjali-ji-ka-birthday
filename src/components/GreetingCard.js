@@ -22,7 +22,7 @@ const GreetingCard = ({ onOpen }) => {
           animate={{ scale: 1.1 }}
           transition={{ duration: 0.5, yoyo: Infinity }}
         >
-          <img src="/images/closed_card.png" alt="Click to Open" className="card-img" />
+          <img src={`${process.env.PUBLIC_URL}/images/closed_card.png`} alt="Click to Open" className="card-img" />
         </motion.div>
       )}
 
@@ -39,7 +39,7 @@ const GreetingCard = ({ onOpen }) => {
             <p>Wishing you an amazing year ahead! 🎉</p>
           </div>
           <div className="card-back">
-            <img src="/images/open_card.png" alt="Decorations" className="decor" />
+            <img src={`${process.env.PUBLIC_URL}/images/open_card.png`} alt="Decorations" className="decor" />
           </div>
         </motion.div>
       )}

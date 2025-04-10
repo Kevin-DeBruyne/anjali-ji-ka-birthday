@@ -62,7 +62,7 @@ const BirthdayCard = () => {
                   transition={{ duration: 1.5, ease: "easeOut", delay: 2 }}
                 >
                   <img
-                    src="/images/birthday_photo.jpg"
+                    src={`${process.env.PUBLIC_URL}/images/birthday_photo.jpg`}
                     alt="Birthday Person"
                     className="birthday-photo"
                   />
@@ -70,7 +70,7 @@ const BirthdayCard = () => {
 
                 {/* Hat Animation (AFTER Image Appears) */}
                 <motion.img
-                  src="/images/hat.svg"
+                  src={`${process.env.PUBLIC_URL}/images/hat.svg`}
                   alt="Birthday Hat"
                   className="birthday-hat"
                   initial={{ y: -100, opacity: 0 }}

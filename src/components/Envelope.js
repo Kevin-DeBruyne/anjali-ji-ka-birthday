@@ -13,7 +13,7 @@ const Envelope = ({ onOpen }) => {
     <div className="envelope-container">
       {!isOpen ? (
         <motion.img
-          src="/images/envelope.png"
+          src={`${process.env.PUBLIC_URL}/images/envelope.png`}
           alt="Click to open"
           className="envelope"
           onClick={handleClick}
@@ -22,7 +22,7 @@ const Envelope = ({ onOpen }) => {
         />
       ) : (
         <motion.img
-          src="/images/envelope_open.png"
+          src={`${process.env.PUBLIC_URL}/images/envelope_open.png`}
           alt="Opened Envelope"
           className="envelope"
           initial={{ opacity: 0, y: 20 }}
