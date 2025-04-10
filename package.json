@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "canvas-confetti": "^1.9.3",
     "framer-motion": "^12.5.0",
+    "gsap": "^3.12.7",
     "react": "^19.0.0",
     "react-confetti": "^6.4.0",
     "react-dom": "^19.0.0",

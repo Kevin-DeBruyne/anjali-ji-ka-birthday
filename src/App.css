@@ -11,6 +11,17 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .click-to-open {
@@ -129,5 +140,94 @@ body {
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+/* Add styles for the intro sequence transition */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+/* Ensure smooth transitions between components */
+.container > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Gift box styles */
+.gift-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.gift-box {
+  font-size: 6rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.gift-box-text {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive styles for gift box */
+@media (max-width: 768px) {
+  .gift-box {
+    font-size: 5rem;
+  }
+  
+  .gift-box-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gift-box {
+    font-size: 4rem;
+  }
+  
+  .gift-box-text {
+    font-size: 1rem;
   }
 }
