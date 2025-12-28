@@ -9,7 +9,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name:  Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -24,6 +24,9 @@ jobs:
         run: CI=false npm run build
 
       - name: Deploy to gh-pages
-        run: npm run deploy
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          npm run deploy
         env:
           CI: false
