@@ -29,7 +29,7 @@ const BirthdayCard = () => {
     }, 1000);
   };
 
-  if (isMobileDevice()) {
+  if (!isMobileDevice()) {
     return (
       <div style={{
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', background: '#fff', color: '#222', fontSize: 22, padding: 32, textAlign: 'center'
