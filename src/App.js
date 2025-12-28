@@ -5,16 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import FestiveStrips from "./components/FestiveStrips";
 import IntroSequence from "./components/IntroSequence";
 
-const isMobileDevice = () => {
-  if (typeof window !== 'undefined') {
-    const ua = navigator.userAgent;
-    const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
-    const isSmallScreen = window.innerWidth < 900;
-    return isMobileUA || isSmallScreen;
-  }
-  return false;
-};
-
 const BirthdayCard = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
@@ -29,17 +19,6 @@ const BirthdayCard = () => {
     }, 1000);
   };
 
-  if (!isMobileDevice()) {
-    return (
-      <div style={{
-        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', background: '#fff', color: '#222', fontSize: 22, padding: 32, textAlign: 'center'
-      }}>
-        <span role="img" aria-label="laptop" style={{ fontSize: 48, marginBottom: 16 }}>💻</span>
-        <b>This app is only available on desktop or laptop devices.</b>
-        <div style={{ marginTop: 12 }}>Please open this website on a computer for the best experience.</div>
-      </div>
-    );
-  }
   return (
     <div className="container">
       <AnimatePresence>
