@@ -26,4 +26,4 @@ jobs:
       - name: Deploy to gh-pages
         run: npm run deploy
         env:
-          CI: true
+          CI: false
